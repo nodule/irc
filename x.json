@@ -72,7 +72,7 @@
       },
       "description": "Private Message",
       "ns": "irc",
-      "name": "pm",
+      "name": "join",
       "fn": "output = [input.bot, 'addListener', 'join'];\n"
     },
     {
