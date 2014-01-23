@@ -236,6 +236,7 @@
         },
         "output": {}
       },
+      "timeout": 0,
       "phrases": {
         "active": "Talking to channel {{input.channel}}"
       },
