@@ -1,0 +1,1 @@
+output = [bot, 'addListener', 'message'];

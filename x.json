@@ -1,0 +1,208 @@
+{
+  "name": "irc",
+  "description": "IRC Client for Chiχ",
+  "version": "0.0.2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nodule/irc.git"
+  },
+  "dependencies": {
+    "irc": "0.x.x"
+  },
+  "nodes": [
+    {
+      "ports": {
+        "input": {
+          "name": {
+            "title": "Bot Name",
+            "type": "string",
+            "default": "χBot"
+          },
+          "channels": {
+            "title": "Channels",
+            "type": "array",
+            "required": true
+          },
+          "debug": {
+            "title": "String Parts",
+            "type": "array",
+            "required": true
+          }
+        },
+        "output": {
+          "bot": {
+            "title": "Bot",
+            "type": "function"
+          }
+        }
+      },
+      "require": {
+        "irc": "0.x.x"
+      },
+      "phrases": {
+        "active": "Starting IRC Bot"
+      },
+      "description": "IRC Bot",
+      "ns": "irc",
+      "name": "bot",
+      "fn": "output = function(cb) {\n\n  var bot = new irc.Client(input.server, input.name, {\n      debug: input.debug,\n      channels: input.channels,\n  });\n\n  bot.addListener('error', function(message) {\n      cb({ error: message});\n  });\n\n  cb({ bot: bot });\n\n};\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "irc": {
+            "title": "IRC Client",
+            "type": "function",
+            "required": true
+          }
+        },
+        "output": {
+          "channel": {
+            "title": "Channel",
+            "type": "string"
+          },
+          "who": {
+            "title": "Who",
+            "type": "string"
+          }
+        }
+      },
+      "phrases": {
+        "active": "Receiving private message"
+      },
+      "description": "Private Message",
+      "ns": "irc",
+      "name": "pm",
+      "fn": "output = [bot, 'addListener', 'join'];\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "irc": {
+            "title": "IRC Client",
+            "type": "function",
+            "required": true
+          }
+        },
+        "output": {
+          "channel": {
+            "title": "Channel",
+            "type": "string"
+          },
+          "who": {
+            "title": "Who",
+            "type": "string"
+          },
+          "by": {
+            "title": "By",
+            "type": "string"
+          },
+          "reason": {
+            "title": "Reason",
+            "type": "string"
+          }
+        }
+      },
+      "phrases": {
+        "active": "Somebody is kicked..."
+      },
+      "description": "Kick Message",
+      "ns": "irc",
+      "name": "kick",
+      "fn": "output = [bot, 'addListener', 'kick'];\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "irc": {
+            "title": "IRC Client",
+            "type": "function",
+            "required": true
+          }
+        },
+        "output": {
+          "from": {
+            "title": "From",
+            "type": "string"
+          },
+          "to": {
+            "title": "To",
+            "type": "string"
+          },
+          "message": {
+            "title": "Message",
+            "type": "string"
+          }
+        }
+      },
+      "phrases": {
+        "active": "Receiving message"
+      },
+      "description": "Public Message",
+      "ns": "irc",
+      "name": "message",
+      "fn": "output = [bot, 'addListener', 'message'];\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "irc": {
+            "title": "IRC Client",
+            "type": "function",
+            "required": true
+          }
+        },
+        "output": {
+          "channel": {
+            "title": "Channel",
+            "type": "string"
+          },
+          "who": {
+            "title": "Who",
+            "type": "string"
+          },
+          "reason": {
+            "title": "Reason",
+            "type": "string"
+          }
+        }
+      },
+      "phrases": {
+        "active": "Client parting"
+      },
+      "description": "Part Message",
+      "ns": "irc",
+      "name": "part",
+      "fn": "output = [bot, 'addListener', 'part'];\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "irc": {
+            "title": "IRC Client",
+            "type": "function",
+            "required": true
+          }
+        },
+        "output": {
+          "nick": {
+            "title": "Nick",
+            "type": "string"
+          },
+          "message": {
+            "title": "Message",
+            "type": "string"
+          }
+        }
+      },
+      "phrases": {
+        "active": "Receiving private message"
+      },
+      "description": "Private Message",
+      "ns": "irc",
+      "name": "pm",
+      "fn": "output = [bot, 'addListener', 'pm'];\n"
+    }
+  ],
+  "twigs": []
+}

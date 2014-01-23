@@ -1,0 +1,31 @@
+{
+  "name": "message",
+  "ns": "irc",
+  "description": "Public Message",
+  "phrases": {
+    "active": "Receiving message"
+  },
+  "ports": {
+    "input": {
+      "irc": {
+        "title": "IRC Client",
+        "type": "function",
+        "required": true
+      }
+    },
+    "output": {
+      "from": {
+        "title": "From",
+        "type": "string"
+      },
+      "to": {
+        "title": "To",
+        "type": "string"
+      },
+      "message": {
+        "title": "Message",
+        "type": "string"
+      }
+    }
+  }
+}

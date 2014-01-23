@@ -1,0 +1,27 @@
+{
+  "name": "pm",
+  "ns": "irc",
+  "description": "Private Message",
+  "phrases": {
+    "active": "Receiving private message"
+  },
+  "ports": {
+    "input": {
+      "irc": {
+        "title": "IRC Client",
+        "type": "function",
+        "required": true
+      }
+    },
+    "output": {
+      "nick": {
+        "title": "Nick",
+        "type": "string"
+      },
+      "message": {
+        "title": "Message",
+        "type": "string"
+      }
+    }
+  }
+}

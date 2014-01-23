@@ -1,0 +1,28 @@
+{
+  "name": "nodule-irc",
+  "description": "IRC Client for Chiχ",
+  "author": "Rob Halff <rob.halff@gmail.com>",
+  "version": "0.0.2",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nodule/irc.git"
+  },
+  "engines": {
+    "node": ">=0.6.0"
+  },
+  "main": "x",
+  "scripts": {
+    "test": "chit -r"
+  },
+  "devDependencies": {
+    "chit": "0.x.x"
+  },
+  "chix": {
+    "name": "irc",
+    "color": "rgb(136,0,35)"
+  },
+  "dependencies": {
+    "irc": "0.x.x"
+  }
+}

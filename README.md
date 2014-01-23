@@ -1,0 +1,2 @@
+IRC Client for Chiχ
+====

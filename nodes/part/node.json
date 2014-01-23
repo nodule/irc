@@ -1,0 +1,31 @@
+{
+  "name": "part",
+  "ns": "irc",
+  "description": "Part Message",
+  "phrases": {
+    "active": "Client parting"
+  },
+  "ports": {
+    "input": {
+      "irc": {
+        "title": "IRC Client",
+        "type": "function",
+        "required": true
+      }
+    },
+    "output": {
+      "channel": {
+        "title": "Channel",
+        "type": "string"
+      },
+      "who": {
+        "title": "Who",
+        "type": "string"
+      },
+      "reason": {
+        "title": "Reason",
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "bot",
+  "ns": "irc",
+  "description": "IRC Bot",
+  "phrases": {
+    "active": "Starting IRC Bot"
+  },
+  "require": {
+    "irc": "0.x.x"
+  },
+  "ports": {
+    "input": {
+      "name": {
+        "title": "Bot Name",
+        "type": "string",
+        "default": "χBot"
+      },
+      "channels": {
+        "title": "Channels",
+        "type": "array",
+        "required": true
+      },
+      "debug": {
+        "title": "String Parts",
+        "type": "array",
+        "required": true
+      }
+    },
+    "output": {
+      "bot": {
+        "title": "Bot",
+        "type": "function"
+      }
+    }
+  }
+}
