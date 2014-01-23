@@ -15,6 +15,11 @@
         "type": "string",
         "default": "χBot"
       },
+      "server": {
+        "title": "IRC Server",
+        "type": "string",
+        "required": true
+      },
       "channels": {
         "title": "Channels",
         "type": "array",
