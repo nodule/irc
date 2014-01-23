@@ -13,7 +13,7 @@
       "name": {
         "title": "Bot Name",
         "type": "string",
-        "default": "χBot"
+        "default": "xBot"
       },
       "server": {
         "title": "IRC Server",
@@ -27,7 +27,7 @@
       },
       "debug": {
         "title": "String Parts",
-        "type": "array",
+        "type": "boolean",
         "default": false
       }
     },
