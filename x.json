@@ -130,10 +130,6 @@
           }
         },
         "output": {
-          "error": {
-            "title": "Error",
-            "type": "object"
-          },
           "from": {
             "title": "From",
             "type": "string"
@@ -145,6 +141,10 @@
           "message": {
             "title": "Message",
             "type": "string"
+          },
+          "error": {
+            "title": "Error",
+            "type": "object"
           }
         }
       },
