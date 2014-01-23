@@ -1,1 +1,1 @@
-output = [bot, 'addListener', 'kick'];
+output = [input.bot, 'addListener', 'kick'];

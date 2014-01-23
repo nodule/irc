@@ -1,1 +1,1 @@
-output = [bot, 'addListener', 'message'];
+output = [input.bot, 'addListener', 'message'];

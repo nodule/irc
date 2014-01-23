@@ -26,7 +26,7 @@
           "debug": {
             "title": "String Parts",
             "type": "array",
-            "required": true
+            "default": false
           }
         },
         "output": {
@@ -50,7 +50,7 @@
     {
       "ports": {
         "input": {
-          "irc": {
+          "bot": {
             "title": "IRC Client",
             "type": "function",
             "required": true
@@ -73,12 +73,12 @@
       "description": "Private Message",
       "ns": "irc",
       "name": "pm",
-      "fn": "output = [bot, 'addListener', 'join'];\n"
+      "fn": "output = [input.bot, 'addListener', 'join'];\n"
     },
     {
       "ports": {
         "input": {
-          "irc": {
+          "bot": {
             "title": "IRC Client",
             "type": "function",
             "required": true
@@ -109,12 +109,12 @@
       "description": "Kick Message",
       "ns": "irc",
       "name": "kick",
-      "fn": "output = [bot, 'addListener', 'kick'];\n"
+      "fn": "output = [input.bot, 'addListener', 'kick'];\n"
     },
     {
       "ports": {
         "input": {
-          "irc": {
+          "bot": {
             "title": "IRC Client",
             "type": "function",
             "required": true
@@ -141,12 +141,12 @@
       "description": "Public Message",
       "ns": "irc",
       "name": "message",
-      "fn": "output = [bot, 'addListener', 'message'];\n"
+      "fn": "output = [input.bot, 'addListener', 'message'];\n"
     },
     {
       "ports": {
         "input": {
-          "irc": {
+          "bot": {
             "title": "IRC Client",
             "type": "function",
             "required": true
@@ -173,12 +173,12 @@
       "description": "Part Message",
       "ns": "irc",
       "name": "part",
-      "fn": "output = [bot, 'addListener', 'part'];\n"
+      "fn": "output = [input.bot, 'addListener', 'part'];\n"
     },
     {
       "ports": {
         "input": {
-          "irc": {
+          "bot": {
             "title": "IRC Client",
             "type": "function",
             "required": true
@@ -201,7 +201,7 @@
       "description": "Private Message",
       "ns": "irc",
       "name": "pm",
-      "fn": "output = [bot, 'addListener', 'pm'];\n"
+      "fn": "output = [input.bot, 'addListener', 'pm'];\n"
     }
   ],
   "twigs": []

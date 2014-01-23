@@ -7,7 +7,7 @@
   },
   "ports": {
     "input": {
-      "irc": {
+      "bot": {
         "title": "IRC Client",
         "type": "function",
         "required": true

@@ -1,1 +1,1 @@
-output = [bot, 'addListener', 'join'];
+output = [input.bot, 'addListener', 'join'];

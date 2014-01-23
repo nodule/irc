@@ -23,7 +23,7 @@
       "debug": {
         "title": "String Parts",
         "type": "array",
-        "required": true
+        "default": false
       }
     },
     "output": {
