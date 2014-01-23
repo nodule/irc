@@ -35,6 +35,10 @@
           }
         },
         "output": {
+          "error": {
+            "title": "Error",
+            "type": "any"
+          },
           "bot": {
             "title": "Bot",
             "type": "function"
