@@ -243,7 +243,7 @@
       "description": "Say Something",
       "ns": "irc",
       "name": "say",
-      "fn": "output = input.bot.say(input.target, input.msg);\n"
+      "fn": "output = input.bot.say(input.target, input.in);\n"
     }
   ],
   "twigs": []
