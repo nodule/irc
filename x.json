@@ -63,30 +63,21 @@
             "title": "IRC Client",
             "type": "function",
             "required": true
-          }
-        },
-        "output": {
+          },
           "channel": {
             "title": "Channel",
             "type": "string"
-          },
-          "who": {
-            "title": "Who",
-            "type": "string"
-          },
-          "raw": {
-            "title": "Raw",
-            "type": "object"
           }
-        }
+        },
+        "output": {}
       },
       "phrases": {
-        "active": "Receiving private message"
+        "active": "Joining channel {{input.channel}}"
       },
-      "description": "Private Message",
+      "description": "Join Channel",
       "ns": "irc",
       "name": "join",
-      "fn": "output = [input.bot, 'addListener', 'join'];\n"
+      "fn": "output = input.bot.join(input.channel)\n"
     },
     {
       "ports": {

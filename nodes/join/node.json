@@ -1,9 +1,9 @@
 {
   "name": "join",
   "ns": "irc",
-  "description": "Private Message",
+  "description": "Join Channel",
   "phrases": {
-    "active": "Receiving private message"
+    "active": "Joining channel {{input.channel}}"
   },
   "ports": {
     "input": {
@@ -11,21 +11,13 @@
         "title": "IRC Client",
         "type": "function",
         "required": true
-      }
-    },
-    "output": {
+      },
       "channel": {
         "title": "Channel",
         "type": "string"
-      },
-      "who": {
-        "title": "Who",
-        "type": "string"
-      },
-      "raw": {
-        "title": "Raw",
-        "type": "object"
       }
+    },
+    "output": {
     }
   }
 }

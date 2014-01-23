@@ -1,1 +1,1 @@
-output = [input.bot, 'addListener', 'join'];
+output = input.bot.join(input.channel)
