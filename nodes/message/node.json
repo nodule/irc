@@ -26,8 +26,8 @@
         "title": "Message",
         "type": "string"
       },
-      "error": {
-        "title": "Error",
+      "raw": {
+        "title": "Raw",
         "type": "object"
       }
     }

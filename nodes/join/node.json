@@ -21,6 +21,10 @@
       "who": {
         "title": "Who",
         "type": "string"
+      },
+      "raw": {
+        "title": "Raw",
+        "type": "object"
       }
     }
   }

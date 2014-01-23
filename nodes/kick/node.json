@@ -29,6 +29,10 @@
       "reason": {
         "title": "Reason",
         "type": "string"
+      },
+      "raw": {
+        "title": "Raw",
+        "type": "string"
       }
     }
   }
