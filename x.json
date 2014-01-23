@@ -211,6 +211,35 @@
       "ns": "irc",
       "name": "pm",
       "fn": "output = [input.bot, 'addListener', 'pm'];\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "bot": {
+            "title": "IRC Client",
+            "type": "function",
+            "required": true
+          },
+          "in": {
+            "title": "Message",
+            "type": "string",
+            "required": true
+          },
+          "target": {
+            "title": "Target",
+            "type": "string",
+            "required": true
+          }
+        },
+        "output": {}
+      },
+      "phrases": {
+        "active": "Talking to channel {{input.channel}}"
+      },
+      "description": "Say Something",
+      "ns": "irc",
+      "name": "say",
+      "fn": "output = [input.bot, 'say', input.target, input.msg];\n"
     }
   ],
   "twigs": []

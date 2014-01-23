@@ -1,0 +1,29 @@
+{
+  "name": "say",
+  "ns": "irc",
+  "description": "Say Something",
+  "phrases": {
+    "active": "Talking to channel {{input.channel}}"
+  },
+  "ports": {
+    "input": {
+      "bot": {
+        "title": "IRC Client",
+        "type": "function",
+        "required": true
+      },
+      "in": {
+        "title": "Message",
+        "type": "string",
+        "required": true
+      },
+      "target": {
+        "title": "Target",
+        "type": "string",
+        "required": true
+      }
+    },
+    "output": {
+    }
+  }
+}
