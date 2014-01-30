@@ -54,7 +54,7 @@
       "description": "IRC Bot",
       "ns": "irc",
       "name": "bot",
-      "fn": "output = function(cb) {\n\n  var bot = new irc.Client(input.server, input.name, {\n      debug: input.debug,\n      channels: input.channels,\n  });\n\n  bot.addListener('error', function(message) {\n      cb({ error: message});\n  });\n\n  cb({ bot: bot });\n\n};\n"
+      "fn": "output = function (cb) {\n\n  var bot = new irc.Client(input.server, input.name, {\n    debug: input.debug,\n    channels: input.channels,\n  });\n\n  bot.addListener('error', function (message) {\n    cb({\n      error: message\n    });\n  });\n\n  cb({\n    bot: bot\n  });\n\n};\n"
     },
     {
       "ports": {
@@ -243,7 +243,7 @@
       "description": "Say Something",
       "ns": "irc",
       "name": "say",
-      "fn": "output = input.bot.say(input.target, input.in);\n"
+      "fn": "output = input.bot.say(input.target, input. in );\n"
     }
   ],
   "twigs": []
