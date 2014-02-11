@@ -10,7 +10,7 @@
     "input": {
       "bot": {
         "title": "IRC Client",
-        "type": "function",
+        "type": "Client",
         "required": true
       },
       "in": {

@@ -41,7 +41,7 @@
           },
           "bot": {
             "title": "Bot",
-            "type": "function"
+            "type": "Client"
           }
         }
       },
@@ -61,7 +61,7 @@
         "input": {
           "bot": {
             "title": "IRC Client",
-            "type": "function",
+            "type": "Client",
             "required": true
           },
           "channel": {
@@ -84,7 +84,7 @@
         "input": {
           "bot": {
             "title": "IRC Client",
-            "type": "function",
+            "type": "Client",
             "required": true
           }
         },
@@ -124,7 +124,7 @@
         "input": {
           "bot": {
             "title": "IRC Client",
-            "type": "function",
+            "type": "Client",
             "required": true
           }
         },
@@ -160,7 +160,7 @@
         "input": {
           "bot": {
             "title": "IRC Client",
-            "type": "function",
+            "type": "Client",
             "required": true
           }
         },
@@ -192,7 +192,7 @@
         "input": {
           "bot": {
             "title": "IRC Client",
-            "type": "function",
+            "type": "Client",
             "required": true
           }
         },
@@ -220,7 +220,7 @@
         "input": {
           "bot": {
             "title": "IRC Client",
-            "type": "function",
+            "type": "Client",
             "required": true
           },
           "in": {

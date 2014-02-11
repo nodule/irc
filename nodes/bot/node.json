@@ -38,7 +38,7 @@
       },
       "bot": {
         "title": "Bot",
-        "type": "function"
+        "type": "Client"
       }
     }
   }
