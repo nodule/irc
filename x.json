@@ -11,6 +11,11 @@
   },
   "nodes": [
     {
+      "dependencies": {
+        "npm": {
+          "irc": "0.x.x"
+        }
+      },
       "ports": {
         "input": {
           "name": {
@@ -44,9 +49,6 @@
             "type": "Client"
           }
         }
-      },
-      "require": {
-        "irc": "0.x.x"
       },
       "phrases": {
         "active": "Starting IRC Bot"

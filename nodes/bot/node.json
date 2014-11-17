@@ -5,9 +5,6 @@
   "phrases": {
     "active": "Starting IRC Bot"
   },
-  "require": {
-    "irc": "0.x.x"
-  },
   "ports": {
     "input": {
       "name": {
@@ -40,6 +37,11 @@
         "title": "Bot",
         "type": "Client"
       }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "irc": "0.x.x"
     }
   }
 }
