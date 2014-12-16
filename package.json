@@ -16,7 +16,9 @@
     "test": "chit -r"
   },
   "devDependencies": {
-    "chit": "0.x.x"
+    "chit": "0.x.x",
+    "chix-flow": "^0.10.7",
+    "chix-monitor-npmlog": "0.0.5"
   },
   "chix": {
     "name": "irc",

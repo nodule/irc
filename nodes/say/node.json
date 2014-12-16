@@ -5,7 +5,6 @@
   "phrases": {
     "active": "Talking to channel {{input.channel}}"
   },
-  "timeout": 0,
   "ports": {
     "input": {
       "bot": {

@@ -1,0 +1,44 @@
+title: IRC Bot
+description: Runs an IRC Client
+
+# provider http://localhost:5000/nodes/{ns}/{name}
+
+Bot(irc/bot), Join(irc/join), Msg(irc/message), Say(irc/say), Log(console/log)
+
+# build by index
+'irc.freenode.net' ->       server Bot
+true               ->       debug  Bot
+'chixbot'          ->       name   Bot
+'#chix.io'         -> [0] channels Bot
+
+# feed bot to the nodes
+#Bot bot  ->  bot Join
+Bot bot   -> ^bot Msg
+Bot bot   -> ^bot Say
+
+Bot error -> msg Log
+
+# Join a channel
+# '#chix.io' ->  channel Join
+
+# Channel/user to talk to
+'#chix.io'  ->  @target Say
+
+# How are you reply setup
+'How are you #?' ->     @in Reply(string/replace)
+'#'              ->  @match Reply
+
+Msg from         -> replace Reply
+
+# Give a reply when chix is mentioned
+'chix'           -> @regexp rChix(string/regexp)
+Msg message      -> in rChix   out -> :start Reply
+
+# Talking about uptime will reply with the server uptime
+'up\s*time'      -> @regexp rUptime(string/regexp)
+Msg message -> in rUptime out -> :start Uptime
+
+Reply  out -> in Say
+Uptime out -> in Say
+
+'uptime' -> @in Uptime(utils/exec)
