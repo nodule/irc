@@ -1,4 +1,6 @@
 title: IRC Bot
+ns: irc
+name: botje
 description: Runs an IRC Client
 
 # provider http://localhost:5000/nodes/{ns}/{name}
@@ -8,7 +10,7 @@ Bot(irc/bot), Join(irc/join), Msg(irc/message), Say(irc/say), Log(console/log)
 # build by index
 'irc.freenode.net' ->       server Bot
 true               ->       debug  Bot
-'chixbot'          ->       name   Bot
+'chibot'          ->       name   Bot
 '#chix.io'         -> [0] channels Bot
 
 # feed bot to the nodes
@@ -25,13 +27,15 @@ Bot error -> msg Log
 '#chix.io'  ->  @target Say
 
 # How are you reply setup
-'How are you #?' ->     @in Reply(string/replace)
+'how are you #?' ->     @in Reply(string/replace)
 '#'              ->  @match Reply
 
 Msg from         -> replace Reply
 
+["/msg nickserv identify itsme","I'm back.."] => in Say
+
 # Give a reply when chix is mentioned
-'chix'           -> @regexp rChix(string/regexp)
+'chi'           -> @regexp rChix(string/regexp)
 Msg message      -> in rChix   out -> :start Reply
 
 # Talking about uptime will reply with the server uptime
