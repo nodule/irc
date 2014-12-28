@@ -30,10 +30,6 @@ Bot error -> msg Log
 'how are you #?' ->     @in Reply(string/replace)
 '#'              ->  @match Reply
 
-# keeps comming
-# replace is already *full*
-# Because :start Reply never runs
-# Which means rChix does not succeed
 Msg from         -> replace Reply
 
 ["/msg nickserv identify itsme","I'm back.."] => in Say
@@ -41,8 +37,6 @@ Msg from         -> replace Reply
 # Give a reply when chix is mentioned
 'chi'           -> @regexp rChix(string/regexp)
 Msg message      -> in rChix   out -> :start Reply
-rChix out -> msg Log
-Msg message -> msg Log
 
 # Talking about uptime will reply with the server uptime
 'up\s*time'      -> @regexp rUptime(string/regexp)

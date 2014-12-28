@@ -1,0 +1,11 @@
+title: IRC Bot
+ns: irc
+name: botje
+description: Runs an IRC Client
+
+Bot(irc/bot)
+Log(console/log)
+
+'irc.freenode.net' ->       server Bot
+'chibot'          ->       name   Bot
+'#chix.io'         -> [0] channels Bot
