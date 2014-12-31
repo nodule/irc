@@ -228,7 +228,7 @@
           "in": {
             "title": "Message",
             "type": "string",
-            "required": true
+            "async": true
           },
           "target": {
             "title": "Target",
@@ -242,9 +242,10 @@
         "active": "Talking to channel {{input.channel}}"
       },
       "description": "Say Something",
+      "async": true,
       "ns": "irc",
       "name": "say",
-      "fn": "output = input.bot.say(input.target, input. in );\n"
+      "fn": "on.input.in = function() {\n  input.bot.say(input.target, data);\n};\n"
     }
   ],
   "twigs": []

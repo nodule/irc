@@ -40,13 +40,15 @@ Msg from         -> replace Reply
 
 # Give a reply when chix is mentioned
 'chi'           -> @regexp rChix(string/regexp)
-Msg message      -> in rChix   out -> :start Reply
+
+Msg message -> in rChix out   -> :start Reply
+Msg message -> in rUptime out -> :start Uptime
+
 rChix out -> msg Log
 Msg message -> msg Log
 
 # Talking about uptime will reply with the server uptime
 'up\s*time'      -> @regexp rUptime(string/regexp)
-Msg message -> in rUptime out -> :start Uptime
 
 Reply  out -> in Say
 Uptime out -> in Say

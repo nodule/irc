@@ -1,1 +1,3 @@
-output = input.bot.say(input.target, input. in );
+on.input.in = function() {
+  input.bot.say(input.target, data);
+};

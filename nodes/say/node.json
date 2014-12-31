@@ -1,6 +1,7 @@
 {
   "name": "say",
   "ns": "irc",
+  "async": true,
   "description": "Say Something",
   "phrases": {
     "active": "Talking to channel {{input.channel}}"
@@ -15,7 +16,7 @@
       "in": {
         "title": "Message",
         "type": "string",
-        "required": true
+        "async" :true
       },
       "target": {
         "title": "Target",
