@@ -1,1 +1,1 @@
-output = $.bot.join($.channel)
+output = $.create($.bot.join($.channel))
