@@ -1,8 +1,8 @@
 output = function (cb) {
 
-  var bot = new irc.Client(input.server, input.name, {
-    debug: input.debug,
-    channels: input.channels,
+  var bot = new irc.Client($.server, $.name, {
+    debug: $.debug,
+    channels: $.channels,
   });
 
   bot.addListener('error', function (message) {

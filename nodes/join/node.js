@@ -1,1 +1,1 @@
-output = input.bot.join(input.channel)
+output = $.bot.join($.channel)

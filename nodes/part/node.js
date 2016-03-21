@@ -1,1 +1,1 @@
-output = [input.bot, 'addListener', 'part'];
+output = [$.bot, 'addListener', 'part'];
