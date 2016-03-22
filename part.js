@@ -28,9 +28,9 @@ module.exports = {
       }
     }
   },
-  fn: function part(input, output, state, done, cb, on) {
+  fn: function part(input, $, output, state, done, cb, on) {
     var r = function() {
-      input.bot.part('part', function partCallback(channel, who, reason) {
+      $.bot.part('part', function partCallback(channel, who, reason) {
         cb({
           channel: channel,
           who: who,

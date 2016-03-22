@@ -1,6 +1,7 @@
 module.exports = {
   name: "say",
   ns: "irc",
+  async: true,
   description: "Say Something",
   phrases: {
     active: "Talking to channel {{input.channel}}"
@@ -15,7 +16,16 @@ module.exports = {
       "in": {
         title: "Message",
         type: "string",
-        required: true
+        async: true,
+        fn: function __IN__(data, x, source, state, input, output) {
+          var r = function() {
+            $.bot.say($.target, $.in);
+          }.call(this);
+          return {
+            state: state,
+            return: r
+          };
+        }
       },
       target: {
         title: "Target",
@@ -25,15 +35,5 @@ module.exports = {
     },
     output: {}
   },
-  fn: function say(input, output, state, done, cb, on) {
-    var r = function() {
-      output = input.bot.say(input.target, input.in);
-    }.call(this);
-    return {
-      output: output,
-      state: state,
-      on: on,
-      return: r
-    };
-  }
+  state: {}
 }

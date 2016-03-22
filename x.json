@@ -56,7 +56,7 @@
       "description": "IRC Bot",
       "ns": "irc",
       "name": "bot",
-      "fn": "output = function (cb) {\n\n  var bot = new irc.Client(input.server, input.name, {\n    debug: input.debug,\n    channels: input.channels,\n  });\n\n  bot.addListener('error', function (message) {\n    cb({\n      error: message\n    });\n  });\n\n  cb({\n    bot: bot\n  });\n\n};\n"
+      "fn": "output = function (cb) {\n  var bot = new irc.Client($.server, $.name, {\n    debug: $.debug,\n    channels: $.channels,\n  });\n\n  bot.addListener('error', function (message) {\n    cb({\n      error: $.create(message)\n    });\n  });\n\n  cb({\n    bot: $.create(bot)\n  });\n};\n"
     },
     {
       "ports": {
@@ -79,7 +79,7 @@
       "description": "Join Channel",
       "ns": "irc",
       "name": "join",
-      "fn": "output = input.bot.join(input.channel)\n"
+      "fn": "output = $.create($.bot.join($.channel))\n"
     },
     {
       "ports": {
@@ -119,7 +119,7 @@
       "description": "Kick Message",
       "ns": "irc",
       "name": "kick",
-      "fn": "output = [input.bot, 'addListener', 'kick'];\n"
+      "fn": "output = [$.bot, 'addListener', 'kick'];\n"
     },
     {
       "ports": {
@@ -155,7 +155,7 @@
       "description": "Public Message",
       "ns": "irc",
       "name": "message",
-      "fn": "output = [input.bot, 'addListener', 'message'];\n"
+      "fn": "output = [$.bot, 'addListener', 'message'];\n"
     },
     {
       "ports": {
@@ -187,7 +187,7 @@
       "description": "Part Message",
       "ns": "irc",
       "name": "part",
-      "fn": "output = [input.bot, 'addListener', 'part'];\n"
+      "fn": "output = [$.bot, 'addListener', 'part'];\n"
     },
     {
       "ports": {
@@ -215,7 +215,7 @@
       "description": "Private Message",
       "ns": "irc",
       "name": "pm",
-      "fn": "output = [input.bot, 'addListener', 'pm'];\n"
+      "fn": "output = [$.bot, 'addListener', 'pm'];\n"
     },
     {
       "ports": {
@@ -245,7 +245,7 @@
       "async": true,
       "ns": "irc",
       "name": "say",
-      "fn": "on.input.in = function() {\n  input.bot.say(input.target, data);\n};\n"
+      "fn": "on.input.in = function() {\n  $.bot.say($.target, $.in);\n};\n"
     }
   ],
   "twigs": []

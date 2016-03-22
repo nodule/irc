@@ -32,9 +32,9 @@ module.exports = {
       }
     }
   },
-  fn: function message(input, output, state, done, cb, on) {
+  fn: function message(input, $, output, state, done, cb, on) {
     var r = function() {
-      input.bot.message('message', function messageCallback(from, to, message, raw) {
+      $.bot.message('message', function messageCallback(from, to, message, raw) {
         cb({
           from: from,
           to: to,

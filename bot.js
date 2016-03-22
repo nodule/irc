@@ -44,21 +44,21 @@ module.exports = {
       irc: require('irc')
     }
   },
-  fn: function bot(input, output, state, done, cb, on, irc) {
+  fn: function bot(input, $, output, state, done, cb, on, irc) {
     var r = function() {
-      var bot = new irc.Client(input.server, input.name, {
-        debug: input.debug,
-        channels: input.channels,
+      var bot = new irc.Client($.server, $.name, {
+        debug: $.debug,
+        channels: $.channels,
       });
 
       bot.addListener('error', function(message) {
         output({
-          error: message
+          error: $.create(message)
         });
       });
 
       output({
-        bot: bot
+        bot: $.create(bot)
       });
     }.call(this);
     return {

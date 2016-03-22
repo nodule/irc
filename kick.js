@@ -36,9 +36,9 @@ module.exports = {
       }
     }
   },
-  fn: function kick(input, output, state, done, cb, on) {
+  fn: function kick(input, $, output, state, done, cb, on) {
     var r = function() {
-      input.bot.kick('kick', function kickCallback(channel, who, by, reason, raw) {
+      $.bot.kick('kick', function kickCallback(channel, who, by, reason, raw) {
         cb({
           channel: channel,
           who: who,

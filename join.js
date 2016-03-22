@@ -19,9 +19,9 @@ module.exports = {
     },
     output: {}
   },
-  fn: function join(input, output, state, done, cb, on) {
+  fn: function join(input, $, output, state, done, cb, on) {
     var r = function() {
-      output = input.bot.join(input.channel)
+      output = $.create($.bot.join($.channel))
     }.call(this);
     return {
       output: output,

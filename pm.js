@@ -24,9 +24,9 @@ module.exports = {
       }
     }
   },
-  fn: function pm(input, output, state, done, cb, on) {
+  fn: function pm(input, $, output, state, done, cb, on) {
     var r = function() {
-      input.bot.pm('pm', function pmCallback(nick, message) {
+      $.bot.pm('pm', function pmCallback(nick, message) {
         cb({
           nick: nick,
           message: message
