@@ -17,7 +17,7 @@ module.exports = {
         title: "Message",
         type: "string",
         async: true,
-        fn: function __IN__(data, x, source, state, input, output) {
+        fn: function __IN__(data, source, state, input, $, output) {
           var r = function() {
             $.bot.say($.target, $.in);
           }.call(this);
